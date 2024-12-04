@@ -3,7 +3,7 @@ import argparse
 
 
 def skanowanie_portow(ip, port):
-    socket.socket(socket.AF_INET, socket.SOCK_STREAM).settimeout(1)
+    socket.socket(socket.AF_INET, socket.SOCK_STREAM).settimeout(0.1)
     try:
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((ip, port))
         print(f"[+] Port {port} jest otwarty")
